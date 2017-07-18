@@ -53,9 +53,12 @@ namespace ZPLPrint
             //object[] data = new object[3] { uid, mac, boardid };
             string label = string.Format(zpl_frmt, data );
 
-            writer.Write(label);
-            writer.Flush();
-
+            int count = options.Repeat_Count;
+            for (int i = 0; i < count; i++)
+            {
+                writer.Write(label);
+                writer.Flush();
+            }
             // Close Connection
             writer.Close();
             client.Close();

@@ -28,5 +28,9 @@ namespace ZPLPrint
             HelpText = "Data file (One data item per line).")]
         public string Data_File { get; set; }
 
+        [Option('n', "Repeat Count", Required = false, DefaultValue = 1,
+            HelpText = "Print repeat count.")]
+        public int Repeat_Count { get; set; }
+
     }
 }
